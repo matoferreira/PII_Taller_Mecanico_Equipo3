@@ -32,11 +32,39 @@ namespace Library
             this.date = date;
             this.type = type;
             this.assignedVehicle = assignedVehicle;
+            this.partsUsed = new ReplacementPartList();
+            this.supervisorWorkHours = 0;
+            this.repairmanWorkHours = 0;
         }
         private static int NewID()
         {
             lastid = lastid + 1;
             return lastid;
+        }
+        public void ChangeStatus()
+        {
+
+        }
+        public void AddSupervisorWorkHours(int hours)
+        {
+            this.supervisorWorkHours = this.supervisorWorkHours + hours;
+        }
+        public void AddRepairmanWorkHours(int hours)
+        {
+            this.repairmanWorkHours = this.repairmanWorkHours + hours;
+        }
+        public void AddPartUsed(ReplacementPart part)
+        {
+            this.partsUsed.AddPart(part);
+        }
+        public int TotalCost()
+        {
+            int costototal = 0;
+            foreach (ReplacementPart part in this.partsUsed)
+            {
+                costototal = costototal + part.partPrice;
+            }
+            return costototal;
         }
 
     }
