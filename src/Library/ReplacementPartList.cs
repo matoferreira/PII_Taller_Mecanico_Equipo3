@@ -23,13 +23,14 @@ namespace Library
             ReplacementList.Remove(Part);
         }
         public int totalCost = 0;
-        /* Agregar el método de sacar el costo de la parte en ReplacementPart
         public int GetListCost()
         {
             foreach (ReplacementPart Part in this.ReplacementList)
             {
-                totalCost = 
+                totalCost = totalCost + Part.GetCost();
             }
-        } */
+            return totalCost;
+        }
+        // Faltaría un GetListBrand y GetListNumber si es necesario
     }
 }
