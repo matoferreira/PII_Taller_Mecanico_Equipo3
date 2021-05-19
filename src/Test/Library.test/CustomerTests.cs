@@ -24,22 +24,19 @@ namespace Tests
         }
 
          [Test]
-        public void TestCINula() // Cambiá el nombre para indicar qué estás probando
-        {
-            Assert.IsNull(cliente.ID);
-        }
-        [Test]
+        
+        
         public void TestCIValida() // Cambiá el nombre para indicar qué estás probando
         {
-            cliente.ID = "4.394.424-9";
+            
             Assert.True(IdUtils.IdIsValid(cliente.ID));
         }
 
         [Test]
-        public void TestCIInvalida() // Si el guion es incorrecto person asigna null al ID
+        public void TestPhoneNumber() // Si el telefono es correcto
         {
-            cliente.ID = "3.333.333-0";
-            Assert.IsNull(cliente.ID, "Cuidado: CI incorrecta");
+            cliente.NumberPhone = 099999999;
+            Assert.AreEqual(cliente.NumberPhone, 099999999);
         }
 
         [Test]
@@ -49,10 +46,10 @@ namespace Tests
             Assert.IsNotNull(cliente.Name);
         }
         [Test]
-        public void TestnombreNoVacio() // Cambiá el nombre para indicar qué estás probando
+        public void Testapellido() // Cambiá el nombre para indicar qué estás probando
         {
-            cliente.Name = "Juan";
-            Assert.IsNotEmpty(cliente.Name);
+            cliente.LastName = "Perez";
+            Assert.AreEqual(cliente.LastName, "Perez");
         }
     }
 }
