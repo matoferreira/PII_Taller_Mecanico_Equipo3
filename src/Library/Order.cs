@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Library
 {
@@ -15,8 +16,9 @@ namespace Library
         public string Status {get; set;}
         public Mechanic Supervisor {get; set;}
         public Mechanic Repairman {get; set;}
+        static List<Order> Ordenes;
 
-        public Order(string date, string type, Vehicle assignedVehicle)
+        public Order(string date, string type, Vehicle assignedVehicle, Mechanic repairman, Mechanic supervisor)
         {
             Id = Order.NewID();
             Date = date;
@@ -25,6 +27,14 @@ namespace Library
             PartsUsed = new ReplacementPartList(this.Id.ToString());
             SupervisorWorkHours = 0;
             RepairmanWorkHours = 0;
+            Repairman = repairman;
+            Supervisor = supervisor;
+            
+        }
+        public static void NewOrder(Order orden)
+        {
+            Order order = new Order(orden.Date, orden.Type, orden.AssignedVehicle, orden.Repairman, orden.Supervisor);
+            Ordenes.Add(order);
         }
         private static int NewID()
         {
