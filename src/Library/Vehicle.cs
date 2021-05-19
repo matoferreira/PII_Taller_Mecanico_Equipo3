@@ -1,3 +1,6 @@
+/*Acorde a los Patrones y principios vistos en clase:
+Vehicle cumple con SRP porque tiene una sola razón de cambio,
+la cual es por cómo esta compuesta la clase Vehicle.*/
 using System;
 
 namespace Library
