@@ -1,18 +1,19 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace Library
 {
     public class WaitingBay
     {
-        private ArrayList VehiclesWaiting(Vehicle);
+        private List<Vehicle> VehiclesWaiting;
 
-        private void AddVehicle (){
-            VehiclesWaiting.Add(Vehicle);
+        private void AddVehicle (Vehicle auto){
+            VehiclesWaiting.Add(auto);
         }
 
-        private void ExitVehicles (){
-            VehiclesWaiting.Remove(Vehicle);
+        private void ExitVehicles (Vehicle auto){
+            VehiclesWaiting.Remove(auto);
         }
     }
 }
