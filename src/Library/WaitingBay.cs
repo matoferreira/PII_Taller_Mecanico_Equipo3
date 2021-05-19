@@ -8,11 +8,11 @@ namespace Library
     {
         private List<Vehicle> VehiclesWaiting;
 
-        private void AddVehicle (Vehicle auto){
+        public void AddVehicle (Vehicle auto){
             VehiclesWaiting.Add(auto);
         }
 
-        private void ExitVehicles (Vehicle auto){
+        public void ExitVehicles (Vehicle auto){
             VehiclesWaiting.Remove(auto);
         }
     }
