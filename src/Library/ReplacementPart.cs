@@ -4,12 +4,9 @@ namespace Library
 {
     public class ReplacementPart
     {
-        private String partNumber;
-        private String partBrand;
-        private int partPrice;
-        public String PartNumber;
-        public String PartBrand;
-        public int PartPrice;
+        public String PartNumber {get;}
+        public String PartBrand {get;}
+        public int PartPrice {get;}
         public ReplacementPart(string partNumber, String partBrand, int partPrice)
         {
             this.PartNumber = partNumber;

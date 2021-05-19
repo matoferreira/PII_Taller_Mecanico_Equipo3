@@ -1,14 +1,16 @@
 using System;
 using System.Collections;
-
+/* Se crea una clase ReplacementPartList que es la responsable de tener una lista de partes.
+Se opta por crear esta clase para cumplir con el principio de SRP y no darle esta responsabilidad a la clase Order.
+La razón de esto es que, de esta manera, ReplacementPartList es la responsable de la lista de partes y su modificación.
+A su vez, por Expert, es la que tiene los conocimientos para calcular el total del costo.
+*/
 namespace Library
 {
     public class ReplacementPartList
     {
-        private String name;
-        private ArrayList replacementList;
-        public String Name;
-        public ArrayList ReplacementList;
+        public String Name {get;}
+        public ArrayList ReplacementList {get; set;}
         public ReplacementPartList(string name, ArrayList replacementList)
         {
             this.Name = name;
@@ -31,6 +33,5 @@ namespace Library
             }
             return totalCost;
         }
-        // Faltaría un GetListBrand y GetListNumber si es necesario
     }
 }
