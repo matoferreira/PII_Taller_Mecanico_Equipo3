@@ -12,12 +12,16 @@ namespace Library
     public class ReplacementPartList
     {
         public String Name {get;}
-        public ArrayList ReplacementList {get;}
+        public ArrayList ReplacementList = new ArrayList();
         private ArrayList replacementList 
         {
+            get
+            {
+                return replacementList;
+            }
             set
             {
-                replacementList = value;
+                replacementList.Add(value);
             }
         }
         public ReplacementPartList(string name)
