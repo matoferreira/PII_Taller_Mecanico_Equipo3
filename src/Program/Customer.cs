@@ -1,10 +1,10 @@
 using System;
 
-namespace UnitTestAndDebug
+namespace Library
 {
-    public class Cliente
+    public class Customer
     {
-        public Cliente(string name, string lastName, int numberPhone, string id)
+        public Customer(string name, string lastName, int numberPhone, string id)
         {
             this.Name = name;
             this.LastName = lastName;
