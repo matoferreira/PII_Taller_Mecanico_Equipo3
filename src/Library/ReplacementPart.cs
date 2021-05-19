@@ -1,3 +1,8 @@
+/*Acorde a los Patrones y principios vistos en clase:
+ReplacementPart cumple con SRP porque tiene una sola razón de cambio,
+la cual es por cómo estan compuestos los repuestos.
+En cuanto a Expert, la misma es la Experta en saber el precio de cada parte para, en un método de otra clase,
+poder obtener el costo total de todos los repuestos.*/
 using System;
 
 namespace Library
