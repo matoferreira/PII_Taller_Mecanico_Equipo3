@@ -36,20 +36,20 @@ namespace Tests
         }
 
         [Test]
-        public void TestCIInvalida() // Si el guion es incorrecto person asigna null al ID
+        public void TestCIInvalida() // Si el guion es incorrecto asigna null al ID
         {
             cliente.ID = "3.333.333-0";
             Assert.IsNull(cliente.ID, "Cuidado: CI incorrecta");
         }
 
         [Test]
-        public void TestnombreNoNulo() // Cambiá el nombre para indicar qué estás probando
+        public void TestnombreNoNulo() // nombre no nulo
         {
             cliente.Name = "Juan";
             Assert.IsNotNull(cliente.Name);
         }
         [Test]
-        public void TestnombreNoVacio() // Cambiá el nombre para indicar qué estás probando
+        public void TestnombreNoVacio() // nombre no vacio
         {
             cliente.Name = "Juan";
             Assert.IsNotEmpty(cliente.Name);
