@@ -10,11 +10,18 @@ namespace Library
     public class ReplacementPartList
     {
         public String Name {get;}
-        public ArrayList ReplacementList {get; set;}
-        public ReplacementPartList(string name, ArrayList replacementList)
+        public ArrayList ReplacementList {get;}
+        private ArrayList replacementList 
+        {
+            set
+            {
+                replacementList = value;
+            }
+        }
+        public ReplacementPartList(string name)
         {
             this.Name = name;
-            this.ReplacementList = replacementList;
+            this.replacementList = new ArrayList();
         }
         public void AddPart(ReplacementPart Part)
         {
