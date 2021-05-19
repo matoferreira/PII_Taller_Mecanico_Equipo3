@@ -22,13 +22,5 @@ namespace Library
         {
             return PartPrice;
         }
-        public String GetBrand()
-        {
-            return PartBrand;
-        }
-        public string GetNumber()
-        {
-            return PartNumber;
-        }
     }
 }
